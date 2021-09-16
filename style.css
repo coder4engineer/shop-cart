@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/*navbar designing*/
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('image/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #0009;
+    font-family: 'Ubuntu', sans-serif;
+}
+.navbar .logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(35, 94, 150);
+    padding: 0 100px;
+    line-height: 80px;
+}
+.navbar ul{
+    float: right;
+    margin-right: 40px;
+}
+.navbar li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+.navbar a{
+    color:rgb(35, 94, 150);
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+a.active, a:hover{
+    border: 1px solid rgb(35, 94, 150);
+    transition: .5s;
+}
+.cart ion-icon {
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+.cart a{
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.container h3 {
+    color:seashell;
+    text-align: center;
+}
+/*-------------Flex Items of the Cart --------*/
+.image {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+.container, .products-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+.add-cart {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(240, 225, 210);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
+/*--------------Add Cart Hover Design when toggle Clicking------*/
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4,
+.image:hover .cart5,
+.image:hover .cart6,
+.image:hover .cart7,
+.image:hover .cart8{
+    bottom: 50px;
+    opacity: 1;
+    padding :10px;
+    text-decoration: none;
+}
+.slider {
+   max-width: 64%;
+   margin: auto;
+   position: relative;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(35, 94, 150);
+    font-weight: bold;
+    font-size: 18px ;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6 ease;
+}
+.active, .dot:hover {
+    background-color : #717171;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+@keyframes fade {
+    from {opacity: 4}
+    to {opacity: 1}
+}
+
+/* responsive */
+
+@media only screen and (max-width:300px){
+    .prev, .next{
+        font-size: 11px;
+    }
+    .dot{
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .prev, .next {
+        font-size: 14px;
+    }
+}
+/*----------------cartmodal-----------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0) ;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.products-container{
+    max-width: 650px;
+    justify-content: space-around;
+    background-color: #fefefe;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.products-container ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.product-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightcoral;
+    margin: 0 auto;
+}
+.product-title {
+    width: 45%;
+} 
+.price {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+.quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.total{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.products {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+.products img {
+    width: 75px;
+}
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+.basketTotalTitle {
+    width: 30%;
+}
+.close {
+    color: #aaaaaa;
+    float : right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

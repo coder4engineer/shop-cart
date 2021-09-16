@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendex Motor-Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <!----------------Navigation Bar Including Cart Modal-->
+        <nav class="navbar">
+            <label class="logo">Ventex Motor Shop</label>
+                <ul>
+                    <li> <a class="active" href="#">Home</a></li>
+                    <li> <a href="#">About</a></li>
+                    <li> <a href="#">Services</a></li>
+                    <button id="myBtn" class="cart">
+                        <ion-icon name="cart"></ion-icon>Cart<span>0</span>
+                    </button>
+                </ul>
+        </nav>
+
+        <!-----UI for Modal-------->
+        <div id="myModal" class="modal">
+            <div class="products-container">
+                <div class="product-header">
+                        <h5 class="product-title">PRODUCT</h5>
+                        <h5 class="price">PRICE</h5>
+                        <h5 class="quantity">QUANTITY</h5>
+                        <h5 class="total">TOTAL</h5>
+                    </div>
+                    <!-------Function for closing the Modal--->
+                        <span class="close">&times;</span>
+                    <!------Listing the Clicked Product on the HomeCart------->    
+                    <div class="product">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------Slider Images---------------------->
+    <div class="slider">
+        <div class="slide fade">
+            <img src="image/2.jpg" width="800" height="450"alt="">
+        </div>
+        <div class="slide fade">
+            <img src="image/3.jpg" width="800" height="450"alt="">
+        </div>
+        <div class="slide fade">
+            <img src="image/4.jpg" width="800" height="450"alt="">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    <!------------------Silder-->
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlides(1)"></span>
+        <span class="dot" onclick="currentSlides(2)"></span>
+        <span class="dot" onclick="currentSlides(3)"></span>
+    </div>
+    <div>
+        <!----------------------------Images Use for The Cart-------------->
+        <div class="container">
+                <div class="image">
+                        <img src="image/1s.jpg" alt="m1" width="225" height="225">
+                        <h3>Suzuki Skydrive Crossover</h3>
+                        <h3>P 69,900.00</h3>
+                        <a class= "add-cart cart1"href="#">Add Cart</a>
+                </div>
+                <div class="image">
+                        <img src="image/2s.jpg" alt="m2" width="225" height="225">
+                        <h3>Yamaha R15 v3</h3>
+                        <h3>₱164,000.00</h3>
+                        <a class= "add-cart cart2"href="#">Add Cart</a>
+                </div>
+                <div class="image">
+                        <img src="image/3s.jpg" alt="m3"width="225" height="225">
+                        <h3>Yamaha Mio Soul i125</h3>
+                        <h3>₱83,900.00</h3>
+                        <a class= "add-cart cart3"href="#">Add Cart</a>
+                </div>
+                <div class="image">
+                        <img src="image/4s.jpg" alt="m4" width="225" height="225">
+                        <h3>Yamaha Mio i125</h3>
+                        <h3>₱72,400.00</h3>
+                        <a class= "add-cart cart4"href="#">Add Cart</a>
+                </div>
+                <div class="image">
+                        <img src="image/5s.jpg" alt="m5" width="225" height="225">
+                        <h3>Yamaha Mio Sporty</h3>
+                        <h3>P66,900.00</h3>
+                        <a class= "add-cart cart4"href="#">Add Cart</a>
+                </div>
+                <div class="image">
+                    <img src="image/6s.jpg" alt="m6" width="225" height="225">
+                    <h3>Honda Click 125i</h3>
+                    <h3>₱77,400</h3>
+                    <a class= "add-cart cart4"href="#">Add Cart</a>
+                 </div>
+                 <div class="image">
+                    <img src="image/7s.jpg" alt="m7" width="225" height="225">
+                    <h3>Honda Beat 2021</h3>
+                    <h3>₱70,400</h3>
+                    <a class= "add-cart cart4"href="#">Add Cart</a>
+                 </div>
+                 <div class="image">
+                    <img src="image/8s.jpg" alt="m8" width="225" height="225">
+                    <h3>Suzuki Burgman Street</h3>
+                    <h3>₱76,000.00</h3>
+                    <a class= "add-cart cart4"href="#">Add Cart</a>
+                 </div>
+         </div>       
+</div> 
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="app.js"> </script>
+</body>
+</html>
